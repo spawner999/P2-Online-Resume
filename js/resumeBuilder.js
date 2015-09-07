@@ -24,13 +24,13 @@ var projects = {
 			"dates" : "08/15",
 			"description" : "About Me",
 			"images" : "myImgUrl1"
-		}
+		},
 		{
 			"title" : "Udacity FEND P1",
 			"dates" : "09/15",
 			"description" : "Build A Porfolio Site",
 			"images" : "myImgUrl2"
-		}
+		},
 		{
 			"title" : "Udacity FEND P2",
 			"dates" : "09/15",
@@ -80,4 +80,19 @@ var education = {
 			"url" : "http://www.udacity.com"
 		}
 	]
+}
+
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").prepend(formattedRole);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").prepend(formattedName);
+
+if (bio.skills.length >0) {
+	$("#header").append(HTMLskillsStart);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
 }
