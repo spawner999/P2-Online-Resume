@@ -1,9 +1,6 @@
 /*
-
 This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
 Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
 Cameron Pittman
 */
 
@@ -24,9 +21,9 @@ var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -64,8 +61,8 @@ The International Name challenge in Lesson 2 where you'll create a function that
 */
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName(name) || function(){};
-    $('#name').html(iName);  
+    var iName = inName() || function(){};
+    $('#name').html(iName);
   });
 });
 
@@ -109,8 +106,10 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  // This next line makes `map` a new Google Map JavaScript Object and attaches it to
-  // <div id="map">, which is appended as part of an exercise late in the course.
+  /*
+  For the map to be displayed, the googleMap var must be
+  appended to #mapDiv in resumeBuilder.js.
+  */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
@@ -149,8 +148,8 @@ function initializeMap() {
   function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
-    var lat = placeData.geometry.location.k;  // latitude from the place service
-    var lon = placeData.geometry.location.D;  // longitude from the place service
+    var lat = placeData.geometry.location.lat();  // latitude from the place service
+    var lon = placeData.geometry.location.lng();  // longitude from the place service
     var name = placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
 
@@ -233,11 +232,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  // Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+  //Make sure the map bounds get updated on page resize
+  map.fitBounds(mapBounds);
+});
