@@ -100,7 +100,9 @@ if (work.jobs.length > 0) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[index].employer);
 		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[index].title);
+		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[index].dates);
+		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[index].description);
 		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
-
+		$(".work-entry:last").append(formattedWorkDescription);
 	}
 }
