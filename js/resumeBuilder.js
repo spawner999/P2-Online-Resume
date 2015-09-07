@@ -23,25 +23,25 @@ var projects = {
 			"title" : "Udacity FEND P0",
 			"dates" : "08/15",
 			"description" : "About Me",
-			"images" : "myImgUrl1"
+			"images" : "https://placehold.it/150x150"
 		},
 		{
 			"title" : "Udacity FEND P1",
 			"dates" : "09/15",
 			"description" : "Build A Porfolio Site",
-			"images" : "myImgUrl2"
+			"images" : "https://placehold.it/150x150"
 		},
 		{
 			"title" : "Udacity FEND P2",
 			"dates" : "09/15",
 			"description" : "Online Resume",
-			"images" : "myImgUrl3"
+			"images" : "https://placehold.it/150x150"
 		}
 	]
 };
 
 var bio = {
-	"name" : "Lorenzo",
+	"name" : "Lorenzo Ferrario",
 	"role" : "FE Apprentice",
 	"welcomeMessage" : "Welcome to My Online Resume!",
 	"contacts" : {
@@ -52,7 +52,9 @@ var bio = {
 	},
 	"skills" : ["HTML5",
 		"CSS3",
-		"JS"]
+		"JS",
+		"BOOTSRAP"
+	]
 };
 
 var education = {
@@ -95,14 +97,40 @@ if (bio.skills.length > 0) {
 	}
 }
 
-if (work.jobs.length > 0) {
+work.display = function(){
 	for(index in work.jobs){
 		$("#workExperience").append(HTMLworkStart);
+
 		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[index].employer);
 		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[index].title);
-		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[index].dates);
-		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[index].description);
 		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+
+		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[index].dates);
+		$(".work-entry:last").append(formattedWorkDates);
+
+		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[index].description);
 		$(".work-entry:last").append(formattedWorkDescription);
 	}
 }
+
+work.display();
+
+projects.display = function(){
+	for(index in projects.projects){
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[index].title);
+		$(".project-entry:last").append(formattedProjectTitle);
+
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[index].dates);
+		$(".project-entry:last").append(formattedProjectDates);
+
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[index].description);
+		$(".project-entry:last").append(formattedProjectDescription);
+
+		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[index].images);
+		$(".project-entry:last").append(formattedProjectImage);
+	}
+}
+
+projects.display();
