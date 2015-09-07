@@ -3,14 +3,14 @@ var work = {
 		{
 			"employer" : "LineaEffe Srl",
 			"title" : "Labourer",
-			"location" : "Italy",
+			"location" : "Lonate Pozzolo, Italy",
 			"dates" : "2015",
 			"description" : "Simple Labourer"
 		},
 		{
 			"employer" : "Università Insubria",
 			"title" : "Front Office",
-			"location" : "Italy",
+			"location" : "Varese, Italy",
 			"dates" : "2014",
 			"description" : "Student Helpdesk"
 		}
@@ -48,7 +48,7 @@ var bio = {
 		"mobile" : "3495141142",
 		"email" : "lore.ferrario@gmail.com",
 		"github" : "spawner999",
-		"location" : "Italy"
+		"location" : "Gallarate, Italy"
 	},
 	"skills" : ["HTML5",
 		"CSS3",
