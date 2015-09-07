@@ -87,12 +87,20 @@ $("#header").prepend(formattedRole);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
 
-if (bio.skills.length >0) {
+if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append(formattedSkill);
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append(formattedSkill);
+	for (index in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[index]);
+		$("#skills").append(formattedSkill);
+	}
+}
+
+if (work.jobs.length > 0) {
+	for(index in work.jobs){
+		$("#workExperience").append(HTMLworkStart);
+		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[index].employer);
+		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[index].title);
+		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+
+	}
 }
