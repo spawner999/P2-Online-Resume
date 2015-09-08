@@ -2,7 +2,9 @@
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 20px;
 	}
-
+a {
+	color: orange !important;
+}
 /*
  *
  * Header
@@ -10,11 +12,14 @@
  */
 
 header {
-	background-color: black;
-	color: white;
+	background-color: orange;
 	text-align: left;
 	}
 
+#head_c{
+	background-color: black;
+	color: white;
+}
 #name {
 	color: orange;
 	font-size: 40px;
@@ -22,15 +27,27 @@ header {
 
 #role {
 	font-size: 22px;
+	color: gray;
 }
 
 #skills-h3 {
-	font-size: 26px;
-	color: gray;
-	text-align: center;
+	font-size: 22px;
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
+
+/*
+ *
+ * Main
+ *
+ */
+
+ section{background-color: orange;}
+
+#work_c{
+ 	background-color: gray;
+ 	color: black !important;
+ }
 
 #map {
 	display: block;

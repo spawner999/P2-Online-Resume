@@ -2,17 +2,17 @@ var work = {
 	"jobs" : [
 		{
 			"employer" : "LineaEffe Srl",
-			"title" : "Labourer",
+			"url" : "http://www.lineaeffesrl.it/",
 			"location" : "Lonate Pozzolo, Italy",
 			"dates" : "2015",
-			"description" : "Simple Labourer"
+			"description" : "fidgfgufa iioayfuasjdaos ashudysauidasuhd"
 		},
 		{
 			"employer" : "Università Insubria",
-			"title" : "Front Office",
+			"url" : "http://www4.uninsubria.it/on-line/home.html",
 			"location" : "Varese, Italy",
 			"dates" : "2014",
-			"description" : "Student Helpdesk"
+			"description" : "fidgfgufa iioayfuasjdaos ashudysauidasuhd"
 		}
 	]
 };
@@ -99,11 +99,10 @@ if (bio.skills.length > 0) {
 
 work.display = function(){
 	for(index in work.jobs){
-		$("#workExperience").append(HTMLworkStart);
+		$("#work_c").append(HTMLworkStart);
 
-		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[index].employer);
-		var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[index].title);
-		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[index].employer).replace("url", work.jobs[index].url);
+		$(".work-entry:last").append(formattedWorkEmployer);
 
 		var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[index].dates);
 		$(".work-entry:last").append(formattedWorkDates);
