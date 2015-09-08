@@ -85,12 +85,12 @@ var education = {
 }
 
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
+$("#name_role").prepend(formattedRole);
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(formattedName);
+$("#name_role").prepend(formattedName);
 
 if (bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
+	$("#skills").append(HTMLskillsStart);
 	for (index in bio.skills) {
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[index]);
 		$("#skills").append(formattedSkill);
