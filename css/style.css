@@ -1,6 +1,6 @@
 * {
 	font-family: 'PT Sans Narrow', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	}
 
 a {
@@ -22,10 +22,6 @@ header {
 	text-align: left;
 	}
 
-#head_c{
-	background-color: black;
-	color: white;
-}
 #name {
 	color: orange;
 	font-size: 40px;
@@ -36,16 +32,21 @@ header {
 	color: gray;
 }
 
-#skills {
-	margin-bottom: 20px;
-
-}
-
 #skills-h3 {
 	font-size: 22px;
-	margin-top: 0px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+#second{
+	margin-top: 20px;
+
+
+
+}
+
+
+
 
 /*
  *

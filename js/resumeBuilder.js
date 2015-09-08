@@ -44,6 +44,7 @@ var bio = {
 	"name" : "Lorenzo Ferrario",
 	"role" : "FE Apprentice",
 	"welcomeMessage" : "Welcome to My Online Resume!",
+	"pic" : "https://placehold.it/150x150",
 	"contacts" : {
 		"mobile" : "3495141142",
 		"email" : "lore.ferrario@gmail.com",
@@ -52,8 +53,8 @@ var bio = {
 	},
 	"skills" : ["HTML5",
 		"CSS3",
-		"JS",
-		"BOOTSRAP"
+		"BOOTSRAP",
+		"JS"
 	]
 };
 
@@ -84,18 +85,27 @@ var education = {
 	]
 }
 
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#name_role").prepend(formattedRole);
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#name_role").prepend(formattedName);
 
-if (bio.skills.length > 0) {
-	$("#skills").append(HTMLskillsStart);
-	for (index in bio.skills) {
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[index]);
-		$("#skills").append(formattedSkill);
+bio.display = function(){
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#name_role").prepend(formattedRole);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#name_role").prepend(formattedName);
+	var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
+	$("#pic").prepend(formattedPic);
+	var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#name_role").append(formattedMsg);
+
+	if (bio.skills.length > 0) {
+		$("#skills").append(HTMLskillsStart);
+		for (index in bio.skills) {
+			var formattedSkill = HTMLskills.replace("%data%", bio.skills[index]);
+			$("#skills").append(formattedSkill);
+		}
 	}
 }
+
+bio.display();
 
 work.display = function(){
 	for(index in work.jobs){
