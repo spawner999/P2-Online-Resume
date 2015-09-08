@@ -37,6 +37,7 @@ var projects = {
 			"description" : "Online Resume",
 			"images" : "https://placehold.it/150x150"
 		}
+
 	]
 };
 
@@ -71,12 +72,12 @@ var education = {
 			"name" : "Università Insubria",
 			"location" : "Varese",
 			"degree" : "Not finished",
-			"majors" : ["Computer Science"],
+			"majors" : [null],
 			"dates" : "2011/2014"
 		}
 	],
 	"onlineCourses" : [
-		{
+{
 			"title" : "Front End Nanodegree",
 			"school" : "Udacity",
 			"dates" : "08-12/2015",
@@ -144,3 +145,38 @@ projects.display = function(){
 
 projects.display();
 
+education.display = function(){
+	for(index in education.schools){
+		$("#education_c").append(HTMLschoolStart);
+
+		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[index].name).replace("url", "http://google.it");
+		$(".education-entry:last").append(formattedSchoolName);
+
+		var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[index].degree);
+		$(".education-entry:last").append(formattedschoolDegree);
+
+		var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[index].dates);
+		$(".education-entry:last").append(formattedschoolDates);
+	}
+
+	if (education.onlineCourses.length > 0) {
+
+		$("#education_c").append(HTMLonlineClasses);
+
+		for(index1 in education.onlineCourses){
+
+			$("#education_c").append(HTMLschoolStart);
+
+			var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[index1].school).replace("url", "http://google.it");
+			$(".education-entry:last").append(formattedOnlineSchool);
+
+			var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[index1].title);
+			$(".education-entry:last").append(formattedOnlineTitle);
+
+			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[index1].dates);
+			$(".education-entry:last").append(formattedOnlineDates);
+		}
+	}
+}
+
+education.display();
