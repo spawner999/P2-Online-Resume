@@ -5,14 +5,14 @@ var work = {
 			"url" : "http://www.lineaeffesrl.it/",
 			"location" : "Lonate Pozzolo, Italy",
 			"dates" : "2015",
-			"description" : "fidgfgufa iioayfuasjdaos ashudysauidasuhd"
+			"description" : "Here goes job description"
 		},
 		{
 			"employer" : "Università Insubria",
 			"url" : "http://www4.uninsubria.it/on-line/home.html",
 			"location" : "Varese, Italy",
 			"dates" : "2014",
-			"description" : "fidgfgufa iioayfuasjdaos ashudysauidasuhd"
+			"description" : "Here goes job description"
 		}
 	]
 };
@@ -116,7 +116,7 @@ work.display();
 
 projects.display = function(){
 	for(index in projects.projects){
-		$("#projects").append(HTMLprojectStart);
+		$("#projects_c").append(HTMLprojectStart);
 
 		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[index].title);
 		$(".project-entry:last").append(formattedProjectTitle);
@@ -134,4 +134,3 @@ projects.display = function(){
 
 projects.display();
 
-$("#mapDiv").append(googleMap);

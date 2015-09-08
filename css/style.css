@@ -2,9 +2,15 @@
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 20px;
 	}
+
 a {
 	color: orange !important;
 }
+
+section {
+ 	background-color: orange;
+ }
+
 /*
  *
  * Header
@@ -30,6 +36,11 @@ header {
 	color: gray;
 }
 
+#skills {
+	margin-bottom: 20px;
+
+}
+
 #skills-h3 {
 	font-size: 22px;
 	margin-top: 0px;
@@ -38,26 +49,37 @@ header {
 
 /*
  *
- * Main
+ * Work
  *
  */
 
- section{background-color: orange;}
 
-#work_c{
- 	background-color: gray;
- 	color: black !important;
+.gray {
+	background-color: gray;
+ 	color: black ;
+ 	padding-bottom: 20px;
  }
 
-#map {
-	display: block;
-	height: 100%;
-	margin-left: 5%;
-	margin-right: 5%;
-}
+ /*
+ *
+ * Projects
+ *
+ */
+
+ .white {
+	background-color: white;
+ 	color: gray ;
+ 	padding-bottom: 20px;
+ }
+
+.black{
+	background-color: black;
+ 	color: white ;
+ 	padding-bottom: 20px;
+ }
 
 #mapDiv {
-	height: 400px;
+	height: 350px;
 	width: 100%;
-	padding-bottom: 5%;
-}
+	}
+
