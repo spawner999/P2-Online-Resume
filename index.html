@@ -5,62 +5,65 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resume</title>
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <header>
-    <div class="container black" id="head_c">
-      <div class="row" id="first">
+  <header class="black">
+    <div class="container" id="head_c">
         <div class="col-sm-12" id="name_role"></div>
-      </div>
-      <hr></hr>
-      <div class="row" id="second">
-        <div class="col-sm-4" id="pic"></div>
-        <div class="col-sm-8" id="skills"></div>
-      </div>
-      <ul id="topContacts" class='flex-box'></ul>
-    </div>
   </header>
 
-  <main>
+  <section class="black" id="skill">
+    <div class="container" id="skill_c">
+      <hr>
+      <div class="col-sm-3" id="pic"></div>
+      <div class="col-sm-9" id="skills"></div>
+    </div>
+    <ul id="topContacts" class='flex-box'></ul>
+    </div>
+  </section>
 
-    <section id="workExperience">
-      <div class="container gray" id="work_c">
-        <div class="col-sm-12">
-          <h2>Work Experience</h2>
+  <section class="black" id="workExperience">
+    <div class="container" id="work_c">
+      <hr>
+      <div class="col-sm-12">
+        <h2>>_ Work Experience</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="black" id="projects">
+    <div class="container" id="projects_c">
+      <hr>
+      <div class="col-sm-12">
+        <h2>>_ Projects</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="black" id="education">
+    <div class="container" id="education_c">
+      <hr>
+        <div class="col-xs-12">
+          <h2>>_ Education</h2>
         </div>
       </div>
-    </section>
-
-    <section id="projects">
-        <div class="container white" id="projects_c">
-          <div class="col-sm-12">
-            <h2>Projects</h2>
-          </div>
-        </div>
-    </section>
-
-   <section id="education">
-        <div class="container gray" id="education_c">
-          <div class="col-sm-12">
-            <h2>Education</h2>
-          </div>
-        </div>
-    </section>
+  </section>
 
 
-    <section id="g_map">
-      <div class="container black" id="map_c">
-        <div class="col-sm-12">
-          <h2>Where I've Lived and Worked</h2>
-        </div>
-       <div class="col-ms-12" id="mapDiv">
+  <section class="black" id="g_map">
+    <div class="container" id="map_c">
+      <hr>
+      <div class="col-sm-12">
+        <h2>>_ Map</h2>
       </div>
-    </section>
+      <div class="col-sm-12" id="mapDiv">
+      </div>
+  </section>
 
     <div id="letsConnect" class='dark-gray'>
       <h2 class='orange center-text'>Let's Connect</h2>
@@ -68,6 +71,8 @@
       </ul>
     </div>
   </div>
+
+
 
   <script src="js/helper.js"></script>
   <script src="js/jQuery.js"></script>

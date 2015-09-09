@@ -28,7 +28,7 @@ var projects = {
 		{
 			"title" : "Udacity FEND P1",
 			"dates" : "09/15",
-			"description" : "Build A Porfolio Site",
+			"description" : "Porfolio Site",
 			"images" : "https://placehold.it/150x150"
 		},
 		{
@@ -52,10 +52,11 @@ var bio = {
 		"github" : "spawner999",
 		"location" : "Gallarate, Italy"
 	},
-	"skills" : ["HTML5",
-		"CSS3",
-		"BOOTSRAP",
-		"JS"
+	"skills" : ["html5",
+		"css3",
+		"js",
+		"bootstrap",
+		"jquery"
 	]
 };
 

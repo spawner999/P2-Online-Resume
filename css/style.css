@@ -1,15 +1,19 @@
 * {
-	font-family: 'PT Sans Narrow', sans-serif;
-	font-size: 18px;
-	}
+	font-family: 'Orbitron', sans-serif;
+	font-size: 20px;
+
+		}
 
 a {
-	color: orange !important;
+	color: #FF5700 !important;
 }
 
-section {
- 	background-color: orange;
- }
+section h2{
+	color: #E8DDCB;
+	margin-bottom: 30px;
+	margin-top: 10px;
+
+}
 
 /*
  *
@@ -17,34 +21,49 @@ section {
  *
  */
 
-header {
-	background-color: orange;
-	text-align: left;
-	}
+Header
+
 
 #name {
-	color: orange;
+	color: #FF5700;
 	font-size: 40px;
 }
 
 #role {
 	font-size: 22px;
-	color: gray;
+	color: #E8DDCB;
 }
 
 #skills-h3 {
-	font-size: 22px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	color: #E8DDCB;
 }
-
-#second{
+#pic{
 	margin-top: 20px;
-
-
-
 }
 
+
+
+
+.project-entry{
+	margin-bottom: 10px;
+}
+
+
+#name_role,
+#work_c,
+#projects_c,
+#education_c,
+#map_c,
+#skill_c {
+	padding: 0;
+}
+
+#onlineTitle{
+	color :#E8DDCB;
+	margin-top: 10px;
+}
 
 
 
@@ -55,32 +74,16 @@ header {
  */
 
 
-.gray {
-	background-color: gray;
- 	color: black ;
- 	padding-bottom: 20px;
- }
 
- /*
- *
- * Projects
- *
- */
-
- .white {
-	background-color: white;
- 	color: gray ;
- 	padding-bottom: 20px;
- }
 
 .black{
 	background-color: black;
- 	color: white ;
- 	padding-bottom: 20px;
+ 	color: #4DD3B0;
+ 	padding-bottom: 10px;
  }
 
 #mapDiv {
 	height: 350px;
-	width: 100%;
+	padding-left: 15px;
 	}
 
