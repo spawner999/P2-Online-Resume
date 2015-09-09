@@ -6,12 +6,7 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h4 id="role">%data%</h4></h3>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<div class="col-sm-6"><li>%contact% : %data%</li></div>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<h4 class="welcome-message">%data%</h4>';
@@ -32,12 +27,13 @@ var HTMLprojectDescription = '<p>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry col-sm-6"></div>';
-var HTMLschoolName = '<a href="url">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolName = '<a href="url">%data%</a>';
+var HTMLschoolDegree = '<div class="date-text">%data%</div>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolMajor = '<div class="date-text">%data%</div>';
 
 var HTMLonlineClasses = '<div class="col-sm-12" id="onlineTitle"><h2>>_ Online Classes</h2></div>';
-var HTMLonlineTitle = ' -- %data%</a>';
+var HTMLonlineTitle = '<div class="date-text">%data%</div>';
 var HTMLonlineSchool = '<a href="url">%data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 

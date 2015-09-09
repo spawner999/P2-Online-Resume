@@ -50,7 +50,7 @@ var bio = {
 		"mobile" : "3495141142",
 		"email" : "lore.ferrario@gmail.com",
 		"github" : "spawner999",
-		"location" : "Gallarate, Italy"
+		"location" : "Madrid, Spain"
 	},
 	"skills" : ["html5",
 		"css3",
@@ -97,6 +97,11 @@ bio.display = function(){
 	$("#pic").prepend(formattedPic);
 	var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#name_role").append(formattedMsg);
+
+	for(index in bio.contacts){
+		var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[index]).replace("%contact%", index);
+		$("#contact_c").append(formattedContact);
+	}
 
 	if (bio.skills.length > 0) {
 		$("#skills").append(HTMLskillsStart);

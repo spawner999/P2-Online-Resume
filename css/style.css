@@ -8,7 +8,7 @@ a {
 	color: #FF5700 !important;
 }
 
-section h2{
+body h2{
 	color: #E8DDCB;
 	margin-bottom: 30px;
 	margin-top: 10px;
@@ -51,12 +51,7 @@ Header
 }
 
 
-#name_role,
-#work_c,
-#projects_c,
-#education_c,
-#map_c,
-#skill_c {
+body .container{
 	padding: 0;
 }
 
@@ -81,6 +76,8 @@ Header
  	color: #4DD3B0;
  	padding-bottom: 10px;
  }
+
+
 
 #mapDiv {
 	height: 350px;

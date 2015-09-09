@@ -1,0 +1,14 @@
+{
+  "name": "online_resume",
+  "version": "0.0.0",
+  "authors": [
+    "spawner999 <lore.ferrario@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "iron-menu-behavior": "PolymerElements/iron-menu-behavior#~1.0.3",
+    "paper-card": "PolymerElements/paper-card#~1.0.4",
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
