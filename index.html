@@ -4,32 +4,50 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume</title>
+  <title>Online Resume</title>
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-  <link href="bower_components/paper-card/paper-card.html" rel="import">
+  <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="black">
-    <div class="container" id="head_c">
+ <nav class="navbar navbar-fixed-top navbar-inverse" id="top_bar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="section_menu">
+          </ul>
+        </li>
+    </div>
+  </div>
+</nav>
 
-        <div class="col-sm-12" id="name_role"></div>
-        <ul id="topContacts" class='flex-box'></ul>
+  <header class="resume_sec">
+    <div class="container" id="head_c">
+      <div class="col-sm-12" id="name_role"></div>
+    </div>
   </header>
 
-  <section class="black" id="skill">
+  <section class="resume_sec" id="skill">
     <div class="container" id="skill_c">
-      <hr>
+      <hr id="top_hr">
       <div class="col-sm-3" id="pic"></div>
       <div class="col-sm-9" id="skills"></div>
     </div>
  </section>
 
-  <section class="black" id="workExperience">
+  <section class="resume_sec" id="workExperience">
     <div class="container" id="work_c">
       <hr>
       <div class="col-sm-12">
@@ -38,7 +56,7 @@
     </div>
   </section>
 
-  <section class="black" id="projects">
+  <section class="resume_sec" id="projects">
     <div class="container" id="projects_c">
       <hr>
       <div class="col-sm-12">
@@ -47,7 +65,7 @@
     </div>
   </section>
 
-  <section class="black" id="education">
+  <section class="resume_sec" id="education">
     <div class="container" id="education_c">
       <hr>
         <div class="col-xs-12">
@@ -56,7 +74,7 @@
       </div>
   </section>
 
-  <section class="black" id="g_map">
+  <section class="resume_sec" id="g_map">
     <div class="container" id="map_c">
       <hr>
       <div class="col-sm-12">
@@ -66,19 +84,39 @@
       </div>
   </section>
 
-  <footer class="black">
+  <footer class="resume_sec" id="contacts">
     <div class="container" id="contact_c">
       <hr>
-      <h2>>_ Contacts</h2>
+      <div class="col-sm-12">
+        <h2>>_ Contacts</h2>
+      </div>
     <div>
   </footer>
 
-  <script src="js/helper.js"></script>
   <script src="js/jQuery.js"></script>
+  <script src="js/helper.js"></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <script src="js/resumeBuilder.js"></script>
   <script src="js/bootstrap.min.js"></script>
-
+  <script>
+    if(document.getElementsByClassName("work-entry").length === 0) {
+      document.getElementById("workExperience").style.display = "none";
+    }
+    if(document.getElementsByClassName("project-entry").length === 0) {
+      document.getElementById("projects").style.display = "none";
+    }
+    if(document.getElementsByClassName("education-entry").length === 0) {
+      document.getElementById("education").style.display = "none";
+    }
+    if(document.getElementsByClassName("c_type").length === 0) {
+      document.getElementById("contacts").style.display = "none";
+    }
+    if(document.getElementsByClassName("c_type", "education-entry", "work-entry").length === 0) {
+      document.getElementById("g_map").style.display = "none";
+      document.getElementById("top_bar").style.display = "none";
+      document.getElementById("top_hr").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>

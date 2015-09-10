@@ -1,18 +1,12 @@
 * {
-	font-family: 'Orbitron', sans-serif;
+	font-family: "Orbitron", sans-serif;
 	font-size: 20px;
-
-		}
-
-a {
-	color: #FF5700 !important;
 }
 
-body h2{
-	color: #E8DDCB;
-	margin-bottom: 30px;
-	margin-top: 10px;
-
+body {
+	background-color: #000000;
+	background-image: url("http://www.transparenttextures.com/patterns/low-contrast-linen.png"); repeat 0 0;
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 /*
@@ -20,9 +14,6 @@ body h2{
  * Header
  *
  */
-
-Header
-
 
 #name {
 	color: #FF5700;
@@ -39,48 +30,46 @@ Header
 	margin-bottom: 20px;
 	color: #E8DDCB;
 }
-#pic{
+
+#pic {
 	margin-top: 20px;
-}
-
-
-
-
-.project-entry{
 	margin-bottom: 10px;
 }
 
-
-body .container{
-	padding: 0;
+#head_c {
+	padding-top: 70px;
 }
-
-#onlineTitle{
-	color :#E8DDCB;
-	margin-top: 10px;
-}
-
-
 
 /*
  *
- * Work
+ * Other Sections
  *
  */
 
+section a {
+	color: #FF5700;
+}
 
+.resume_sec h2 {
+	color: #E8DDCB;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
 
+.project-entry {
+	margin-bottom: 10px;
+}
 
-.black{
-	background-color: black;
+.c_type {
+	color: #FF5700;
+}
+
+.resume_sec {
  	color: #4DD3B0;
  	padding-bottom: 10px;
- }
-
-
+}
 
 #mapDiv {
 	height: 350px;
-	padding-left: 15px;
-	}
-
+	margin-bottom: 10px;
+}
