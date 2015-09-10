@@ -9,7 +9,7 @@ var	HTMLheaderRole	=	'<h4	id="role">%data%</h4></h3>';
 var HTMLmenuSkills = '<li><a href="#skill_c">Skills</a></li>';
 var HTMLmenuWork = '<li><a href="#work_c"">Work</a></li>';
 var HTMLmenuProjects = '<li><a href="#projects_c">Projects</a></li>';
-var HTMLmenuEducation = '<li><a href="#skill_c">Education</a></li>';
+var HTMLmenuEducation = '<li><a href="#education_c">Education</a></li>';
 var HTMLmenuMap = '<li><a href="#map_c">Map</a></li>';
 var HTMLmenuContacts = '<li><a href="#contact_c">Contacts</a></li>';
 
